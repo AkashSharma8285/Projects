@@ -52,7 +52,7 @@ public class AppTest extends TestCase {
 
 			Screen screen = new Screen();
 
-		/*	Pattern Ask_Textbox = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+			Pattern Ask_Textbox = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Ask_Textbox.PNG");
 			screen.click(Ask_Textbox, 1);
 			screen.type("Cisco");
@@ -80,7 +80,7 @@ public class AppTest extends TestCase {
 					+ File.separator + "Images" + File.separator + "Cisco_OK_Button.PNG");
 			screen.click(Cisco_OK_Button);
 
-			Thread.sleep(5000);*/
+			Thread.sleep(5000);
 
 			System.setProperty("webdriver.chrome.driver", "src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Drivers" + File.separator + "chromedriver.exe");
@@ -146,10 +146,10 @@ public class AppTest extends TestCase {
 			screen.wait(switch_browser, 10);
 			screen.doubleClick(switch_browser);
 
-			Pattern close_new_browser = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+			/*Pattern close_new_browser = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "close_new_chrome_browser.PNG");
 			screen.wait(close_new_browser, 10);
-			screen.click(close_new_browser);
+			screen.click(close_new_browser);*/
 
 			Thread.sleep(3000);
 
@@ -165,7 +165,8 @@ public class AppTest extends TestCase {
 			FileUtils.copyFile(src, new File("C:\\Users\\akashsharma\\Desktop\\Screenshots\\Screenshot_image.PNG"));
 
 			driver.quit();
-			Thread.sleep(1000);
+			Thread.sleep(5000);
+			
 
 			Pattern desktop_screenshot_folder = new Pattern("src" + File.separator + "main" + File.separator
 					+ "resources" + File.separator + "Images" + File.separator + "screenshots.PNG");
