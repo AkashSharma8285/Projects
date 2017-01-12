@@ -146,11 +146,6 @@ public class AppTest extends TestCase {
 			screen.wait(switch_browser, 10);
 			screen.doubleClick(switch_browser);
 
-			/*Pattern close_new_browser = new Pattern("src" + File.separator + "main" + File.separator + "resources"
-					+ File.separator + "Images" + File.separator + "close_new_chrome_browser.PNG");
-			screen.wait(close_new_browser, 10);
-			screen.click(close_new_browser);*/
-
 			Thread.sleep(3000);
 
 			Pattern march_tab = new Pattern("src" + File.separator + "main" + File.separator + "resources"
@@ -162,18 +157,18 @@ public class AppTest extends TestCase {
 
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-			FileUtils.copyFile(src, new File("C:\\Users\\akashsharma\\Desktop\\Screenshots\\Screenshot_image.PNG"));
+			FileUtils.copyFile(src, new File("C:\\Users\\akashsharma\\Desktop\\Screenshots\\SAM_ProjectsTask_ForToday.PNG"));
 
 			driver.quit();
 			Thread.sleep(5000);
-			
+	
 
 			Pattern desktop_screenshot_folder = new Pattern("src" + File.separator + "main" + File.separator
 					+ "resources" + File.separator + "Images" + File.separator + "screenshots.PNG");
 			screen.doubleClick(desktop_screenshot_folder);
 
 			Pattern screenshot_captured = new Pattern("src" + File.separator + "main" + File.separator + "resources"
-					+ File.separator + "Images" + File.separator + "Screenshot_image.PNG");
+					+ File.separator + "Images" + File.separator + "SAM_ProjectsTask_ForToday.PNG");
 			screen.rightClick(screenshot_captured);
 
 			Pattern send_screenshot_link = new Pattern("src" + File.separator + "main" + File.separator + "resources"
@@ -205,19 +200,45 @@ public class AppTest extends TestCase {
 					+ File.separator + "Images" + File.separator + "Save_Button.PNG");
 			screen.click(outlook_save_button);
 
-			Pattern pattern8 = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+			Pattern To_Textbox = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "To_Textbox_Button.PNG");
-			screen.click(pattern8);
+			screen.click(To_Textbox);
 
 			Pattern outlook_to_textbox = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "To_Textbox_Button.PNG");
-			screen.type(outlook_to_textbox, "tushargupta1@qainfotech.com");
+			screen.type(outlook_to_textbox, "alokkashyap@qainfotech.com; amitkumartomar@qainfotech.com; tushargupta1@qainfotech.com; "
+					+ "akash.sharma@qainfotech.com; nitindrubra@qainfotech.com; similmittal@qainfotech.com; shailjajain@qainfotech.com; "
+					+ "mohitchauhan@qainfotech.com; naveen.kumar@qainfotech.com; aditikaloni@qainfotech.com; pranavbatra@qainfotech.com; "
+					+ "nehachawla@qainfotech.com; pratishthasingh@qainfotech.com");
 
 			Pattern outlook_mail_body = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Mail_Body.PNG");
 			screen.click(outlook_mail_body);
 			screen.wait(outlook_mail_body, 3);
 			screen.type(outlook_mail_body, "Hi team this is your Today's projects count");
+			
+			Pattern Attach_File_Button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "Attach_file.PNG");
+			screen.click(Attach_File_Button);
+			
+			Pattern BrowsePC_Button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "Browse_PC.PNG");
+			screen.click(BrowsePC_Button);
+			
+			Thread.sleep(2000);
+			
+			Pattern Downloads = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "Downloads.PNG");
+			screen.click(Downloads);
+			
+			Pattern File_Name = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "FileName_Textbox.PNG");
+			screen.click(File_Name);
+			screen.type("Report.xlsx");
+			
+			Pattern Open_button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "Open_button.PNG");
+			screen.click(Open_button);
 
 			Pattern outlook_send_button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Send_Button.PNG");
