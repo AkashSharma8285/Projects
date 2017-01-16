@@ -63,7 +63,7 @@ public class AppTest extends TestCase {
 					+ File.separator + "Images" + File.separator + "Cisco_Button.PNG");
 			screen.click(Cisco_tab);
 
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 
 			Pattern Cisco_Connect_Button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Cisco_Connect_Button.PNG");
@@ -194,7 +194,7 @@ public class AppTest extends TestCase {
 					+ "resources" + File.separator + "Images" + File.separator + "Attach_Button.PNG");
 			screen.click(attach_button_mail_recipient);
 
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 
 			Pattern outlook_save_button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Save_Button.PNG");
