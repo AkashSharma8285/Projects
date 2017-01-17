@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.qait.CMA_Project.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 86.068 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 139.83 sec

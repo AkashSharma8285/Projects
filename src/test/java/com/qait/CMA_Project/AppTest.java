@@ -54,10 +54,13 @@ public class AppTest extends TestCase {
 
 			Pattern Ask_Textbox = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Ask_Textbox.PNG");
-			screen.click(Ask_Textbox, 1);
+			screen.click(Ask_Textbox);
+			
+			Thread.sleep(3000);
+			
 			screen.type("Cisco");
 
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 
 			Pattern Cisco_tab = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Cisco_Button.PNG");
