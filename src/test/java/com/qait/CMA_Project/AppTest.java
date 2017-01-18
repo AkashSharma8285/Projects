@@ -190,8 +190,19 @@ public class AppTest extends TestCase {
 			
 			driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 			
-			driver.findElement(By.cssSelector(".oj div textarea")).sendKeys("akash.sharma@qainfotech.com "
-					+ "amitkumartomar@qainfotech.com");
+			driver.findElement(By.cssSelector(".oj div textarea")).sendKeys("alokkashyap@qainfotech.com\n"
+					+ "amitkumartomar@qainfotech.com\n"
+					+ "akash.sharma@qainfotech.com\n"
+					+ "tushargupta1@qainfotech.com\n"
+					+ "nitindrubra@qainfotech.com\n"
+					+ "similmittal@qainfotech.com\n"
+					+ "shailjajain@qainfotech.com\n"
+					+ "mohitchauhan@qainfotech.com\n"
+					+ "naveen.kumar@qainfotech.com\n"
+					+ "aditikaloni@qainfotech.com\n"
+					+ "pranavbatra@qainfotech.com\n"
+					+ "nehachawla@qainfotech.com\n"
+					+ "pratishthasingh@qainfotech.com");
 			
 			driver.findElement(By.cssSelector(".aoD.az6 input")).sendKeys("Current SAM Projects Task in CMA");
 			
