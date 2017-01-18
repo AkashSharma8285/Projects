@@ -3,8 +3,11 @@ package com.qait.CMA_Project;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -88,16 +91,16 @@ public class AppTest extends TestCase {
 			System.setProperty("webdriver.chrome.driver", "src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Drivers" + File.separator + "chromedriver.exe");
 			
-			WebDriver driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.get("http://cma.cengage.com/");
+			WebDriver driver1 = new ChromeDriver();
+			driver1.manage().window().maximize();
+			driver1.get("http://cma.cengage.com/");
 			try {
 				Thread.sleep(30000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			driver.navigate().refresh();
+			driver1.navigate().refresh();
 
 			Pattern cma_login_textbox = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Login_Textbox.PNG");
@@ -158,19 +161,91 @@ public class AppTest extends TestCase {
 
 			Thread.sleep(5000);
 
-			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			File src = ((TakesScreenshot) driver1).getScreenshotAs(OutputType.FILE);
 
-			FileUtils.copyFile(src, new File("C:\\Users\\akashsharma\\Desktop\\Screenshots\\SAM_ProjectsTask_ForToday.PNG"));
-
-			driver.quit();
+			FileUtils.copyFile(src, new File("C:\\Users\\akashsharma\\Desktop\\SAM_ProjectsTask_ForToday.PNG"));
+			
+			driver1.quit();
 			Thread.sleep(5000);
-	
+			
+			WebDriver driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.get("http://gmail.com/");
+			
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			
+			driver.findElement(By.cssSelector("#Email")).sendKeys("samprojects16@gmail.com");
+			
+			driver.findElement(By.cssSelector("#next")).click();
+			
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			
+			driver.findElement(By.cssSelector("#Passwd")).sendKeys("password@123");
+			
+			driver.findElement(By.cssSelector("#signIn")).click();
+			
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-			Pattern desktop_screenshot_folder = new Pattern("src" + File.separator + "main" + File.separator
+			driver.findElement(By.cssSelector(".aic .z0 div")).click();
+			
+			driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+			
+			driver.findElement(By.cssSelector(".oj div textarea")).sendKeys("akash.sharma@qainfotech.com "
+					+ "amitkumartomar@qainfotech.com");
+			
+			driver.findElement(By.cssSelector(".aoD.az6 input")).sendKeys("Current SAM Projects Task in CMA");
+			
+			driver.findElement(By.cssSelector(".Ar.Au div")).sendKeys("Hi All,\n"
+					+ "Please refer attachments for projects count with steps available in QA Court (Total work for the day)\n"
+					+ "Thank You\n\n"
+					+ "Best regards\n"
+					+ "SAM Team.");
+			
+			driver.findElement(By.cssSelector(".wG.J-Z-I div div div")).click();
+			
+			Thread.sleep(4000);
+			
+			Pattern Desktop = new Pattern("src" + File.separator + "main" + File.separator
+					+ "resources" + File.separator + "Images" + File.separator + "Desktop.PNG");
+			screen.click(Desktop);
+			
+			Pattern File_Name = new Pattern("src" + File.separator + "main" + File.separator
+					+ "resources" + File.separator + "Images" + File.separator + "FileName_Textbox.PNG");
+			screen.click(File_Name);
+			screen.type("SAM_ProjectsTask_ForToday.PNG");
+			
+			Pattern Open_button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "Open_button.PNG");
+			screen.click(Open_button);
+
+			Thread.sleep(6000);
+			
+			driver.findElement(By.cssSelector(".wG.J-Z-I div div div")).click();
+			
+			Pattern Downloads = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "Downloads.PNG");
+			screen.click(Downloads);
+			
+			Pattern File_Name1 = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "FileName_Textbox.PNG");
+			screen.click(File_Name1);
+			screen.type("Report.xlsx");
+
+			Pattern Open_button1 = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+					+ File.separator + "Images" + File.separator + "Open_button.PNG");
+			screen.click(Open_button1);
+			
+			Thread.sleep(6000);
+			
+			driver.findElement(By.cssSelector(".gU.Up div")).click();
+			
+			driver.quit();
+			
+			/*Pattern desktop_screenshot_folder = new Pattern("src" + File.separator + "main" + File.separator
 					+ "resources" + File.separator + "Images" + File.separator + "screenshots.PNG");
 			screen.doubleClick(desktop_screenshot_folder);
-
-			Pattern screenshot_captured = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+*/
+			/*Pattern screenshot_captured = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "SAM_ProjectsTask_ForToday.PNG");
 			screen.rightClick(screenshot_captured);
 
@@ -246,7 +321,7 @@ public class AppTest extends TestCase {
 			Pattern outlook_send_button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Send_Button.PNG");
 			screen.click(outlook_send_button);
-		} catch (Exception e) {
+*/		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
