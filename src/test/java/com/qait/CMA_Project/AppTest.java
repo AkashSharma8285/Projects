@@ -90,8 +90,6 @@ public class AppTest extends TestCase {
 
 			Thread.sleep(5000);
 
-			/*System.setProperty("webdriver.chrome.driver", "src" + File.separator + "main" + File.separator + "resources"
-					+ File.separator + "Drivers" + File.separator + "chromedriver.exe");*/
 			
 			WebDriver driver1 = new ChromeDriver();
 			driver1.manage().window().maximize();
@@ -104,7 +102,7 @@ public class AppTest extends TestCase {
 			}
 			driver1.navigate().refresh();
 
-/*			Pattern cma_login_textbox = new Pattern("src" + File.separator + "main" + File.separator + "resources"
+			Pattern cma_login_textbox = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Login_Textbox.PNG");
 			screen.wait(cma_login_textbox, 5);
 			screen.type(cma_login_textbox, "akashyap");
@@ -165,7 +163,7 @@ public class AppTest extends TestCase {
 
 			File src = ((TakesScreenshot) driver1).getScreenshotAs(OutputType.FILE);
 
-			FileUtils.copyFile(src, new File("C:\\Users\\akashsharma\\Desktop\\SAM_ProjectsTask_ForToday.PNG"));*/
+			FileUtils.copyFile(src, new File("C:\\Users\\akashsharma\\Desktop\\SAM_ProjectsTask_ForToday.PNG"));
 			
 			driver1.quit();
 			Thread.sleep(5000);
