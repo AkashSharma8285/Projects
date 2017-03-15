@@ -82,7 +82,7 @@ public class AppTest extends TestCase {
 
 			Pattern Cisco_Password = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Cisco_Password.PNG");
-			screen.type(Cisco_Password, "Qait@123");
+			screen.type(Cisco_Password, "Qait@121");
 
 			Pattern Cisco_OK_Button = new Pattern("src" + File.separator + "main" + File.separator + "resources"
 					+ File.separator + "Images" + File.separator + "Cisco_OK_Button.PNG");
@@ -206,7 +206,10 @@ public class AppTest extends TestCase {
 					+ "aditikaloni@qainfotech.com\n"
 					+ "pranavbatra@qainfotech.com\n"
 					+ "nehachawla@qainfotech.com\n"
-					+ "pratishthasingh@qainfotech.com");
+					+ "pratishthasingh@qainfotech.com\n"
+					+ "paras@qainfotech.com\n"
+					+ "sachinkumarsingh@qainfotech.com\n"
+					+ "alokmishra@qainfotech.com");
 			
 			driver.findElement(By.cssSelector(".aoD.az6 input")).sendKeys("Current SAM Projects Task in CMA");
 			
